@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+body {
+  background-color: whitesmoke;
+  overflow-x: hidden;
+}
+
+div {
+  scroll-snap-align: start;
+}
+
+.col-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+}
+/* SLIDE */
+.slide {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide .content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 120px;
+  width: calc(70% - 40px);
+  /* background-color: rgba(255, 255, 0, 0.144); */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+/* SLIDE 1 */
+
+#s1 {
+  background-color: #fffcdc;
+}
+
+#s1 .content h1 {
+  font-size: 80px;
+  font-weight: 800px;
+}
+
+#s1-logo {
+  height: 433px;
+  width: 577px;
+}
+/* NAV */
+
+nav {
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+nav .ctr {
+  width: 300px;
+  height: 300px;
+  border-right: 3px solid #516beb;
+  border-radius: 200px;
+  transition-duration: 0.4s;
+  transform: translateX(-50%);
+}
+
+nav:hover .ctr {
+  border-width: 3px;
+  width: 330px;
+  height: 330px;
+  background-color: #516beb;
+}
+
+nav:hover .ctr a {
+  margin-top: 14px;
+  margin-left: 10px;
+  font-size: 24px;
+  color: White;
+  border-color: white;
+  opacity: 1;
+}
+
+nav a {
+  position: absolute;
+  border: 1px solid #516beb;
+  padding: 6px 14px;
+  color: #516beb;
+  font-size: 16px;
+  text-decoration: none;
+  /* background-color: white; */
+  /* border-radius: 8px; */
+  transition-duration: 0.4s;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  /* border-left: 12px solid green; */
+  border-left-width: 12px;
+}
+nav #n1 {
+  transform: translate(150px, 40px);
+}
+
+nav #n2 {
+  transform: translate(150px, 100px);
+}
+
+nav #n3 {
+  transform: translate(150px, 160px);
+}
+
+nav #n4 {
+  transform: translate(150px, 220px);
+}
+
+.nav-logo {
+  position: fixed;
+  height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  z-index: 0;
+}
