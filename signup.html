@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="ctr">
+        <a href="index.html" id="n1">HOME</a>
+        <a href="login.html" id="n2">LOGIN</a>
+        <a href="guide.html" id="n3">GUIDE</a>
+        <a href="#" id="n4">APP</a>
+      </div>
+    </nav>
+    <div class="container col-flex" id="container">
+      <label
+        style="
+          padding: 12px 0;
+          border-top: 1px solid #516beb;
+          border-bottom: 1px solid #516beb;
+          margin-bottom: 10px;
+          font-size: 24px;
+          font-weight: 800;
+          border-radius: 10px;
+        "
+        >THE DELIVERY BOY</label
+      >
+      <label
+        style="
+          color: #516beb;
+          font-size: 18px;
+          font-weight: 800;
+          margin-bottom: 20px;
+        "
+        >SIGNUP</label
+      >
+      <label>New Nickname:</label>
+      <input type="text" placeholder="Nickname" />
+      <label style="margin-top: 20px">Create Password:</label>
+      <input
+        style="margin-bottom: 20px"
+        type="password"
+        placeholder="Password"
+      />
+      <label style="margin-top: 0">Re-Enter Password:</label>
+      <input
+        style="margin-bottom: 20px"
+        type="password"
+        placeholder="Re-Enter Password"
+      />
+
+      <label
+        >Already registered?
+        <a href="login.html" style="text-decoration: none; color: #516beb"
+          >Login!</a
+        ></label
+      >
+      <button>SIGNUP</button>
+    </div>
+  </body>
+  <style>
+    * {
+      transition-duration: 0.4s;
+    }
+    body {
+      background-color: #fffcdc;
+    }
+    body .container {
+      width: 20%;
+      padding: 60px;
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: Center;
+      border: 1px solid white;
+      border-radius: 4px;
+    }
+    body .container:hover {
+      border: 1px solid #516beb;
+    }
+    body label {
+      margin-top: 10px;
+    }
+    body .container input {
+      padding: 8px 16px;
+      outline: none;
+      margin-top: 10px;
+      border: 1px solid black;
+      transition-duration: 0.4s;
+    }
+    body .container input:focus {
+      border-color: #516beb;
+    }
+    body .container input:focus #container {
+      border: 1px solid black;
+    }
+    body .container input:focus {
+      border-color: #516beb;
+    }
+    body .container button {
+      margin-top: 20px;
+      padding: 8px 0;
+      outline: none;
+      border: none;
+      background-color: #516beb;
+      font-weight: 800;
+      color: White;
+      font-size: 18px;
+      transition-duration: 0.4s;
+    }
+    body .container button:hover {
+      background-color: green;
+    }
+  </style>
+</html>
