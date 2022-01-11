@@ -61,7 +61,7 @@ div {
 /* NAV */
 
 nav {
-  width: 500px;
+  width: 150px;
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
