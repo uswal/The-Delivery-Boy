@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-div {
+div.slide {
   scroll-snap-align: start;
 }
 
@@ -28,7 +28,7 @@ div {
 /* SLIDE */
 .slide {
   width: 100vw;
-  height: 100vh;
+  height: 100vh; /* */
   overflow: hidden;
 }
 
