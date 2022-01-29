@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+.row-flex {
+  display: flex;
+  flex-direction: rpw;
+}
+.col-flex {
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+body .container .header {
+  font-size: 70px;
+  font-weight: 900;
+  margin-bottom: 150px;
+}
+
+body .container .big-option {
+  font-size: 48px;
+  margin-bottom: 30px;
+  border: 1px solid grey;
+  padding: 15px 80px;
+}
+body .container th {
+  font-weight: 900;
+  font-size: 26px;
+  border-bottom: 1px solid grey;
+  padding: 10px 20px;
+}
+
+body .container td {
+  font-size: 22px;
+  padding: 8px 0;
+}
+
+body .container table {
+  border-bottom: 1px solid grey;
+  padding: 10px 0;
+}
+
+body .leaderboard button {
+  font-size: 22px;
+  padding: 8px 14px;
+  outline: none;
+  background: none;
+  border: none;
+  border: 1px solid green;
+  margin: 16px 10px;
+}
