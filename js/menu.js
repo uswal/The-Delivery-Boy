@@ -1,5 +1,7 @@
+// import beginPlay from "./play.js";
+
 var menuState = "LEADERBOARD"; // MENU  TUTORIAL LEADERBOARD PLAY
-var playState = "SHEET"; // ARE_YOU_READY SHEET LEVEL HINTS RESULT
+//var playState = "SHEET"; // ARE_YOU_READY SHEET LEVEL HINTS RESULT
 const frame = document.getElementById("frame");
 
 function changeToDefaultMenu() {
@@ -7,7 +9,7 @@ function changeToDefaultMenu() {
   frame.innerHTML = `
             <div class="container col-flex menu">
             <label class="header">MENU</label>
-            <label class="big-option">PLAY</label>
+            <label class="big-option" id="play">PLAY</label>
             <label class="big-option">TUTORIAL</label>
             <label class="big-option" id="leaderboard">LEADERBOARD</label>
           </div>
@@ -15,7 +17,9 @@ function changeToDefaultMenu() {
   document
     .getElementById("leaderboard")
     .addEventListener("click", changeToLeaderboard);
+  document.getElementById("play").addEventListener("click", beginPlay);
 }
+
 function changeToLeaderboard() {
   menuState = "LEADERBOARD";
   frame.innerHTML = `
