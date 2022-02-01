@@ -44,7 +44,9 @@ div.slide {
   border-right: 1px solid black;
 }
 /* SLIDE 1 */
-
+#s2-img {
+  max-width: 60vw;
+}
 #s1 {
   background-color: #fffcdc;
 }
@@ -55,8 +57,8 @@ div.slide {
 }
 
 #s1-logo {
-  height: 433px;
-  width: 577px;
+  max-width: 433px;
+  max-height: 577px;
 }
 /* NAV */
 

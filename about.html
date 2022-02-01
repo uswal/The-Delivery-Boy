@@ -16,7 +16,7 @@
         <a href="index.html" id="n1">HOME</a>
         <a href="login.html" id="n2">LOGIN</a>
         <a href="about.html" id="n3">ABOUT</a>
-        <a href="#" id="n4">APP</a>
+        <a href="app.html" id="n4" target="_blank">APP</a>
       </div>
     </nav>
 
@@ -27,7 +27,7 @@
     <div class="slide" id="s1">
       <div class="content">
         <center class="col-flex">
-          <h1 style="font-weight: 900; padding-bottom: 120px">DETAILS</h1>
+          <h1 style="font-weight: 900; padding-bottom: 120px">ABOUT</h1>
           <center><img id="s1-logo" src="assets/plan.svg" /></center>
           <label class="col-flex">
             <label
@@ -46,7 +46,7 @@
 
     <div class="slide" id="s2" style="background-color: white">
       <div class="content">
-        <img src="assets/Tree.JPG" />
+        <img id="s2-img" src="assets/Tree.JPG" />
       </div>
     </div>
 
@@ -54,15 +54,64 @@
       <div class="content">
         <h1>MENU</h1>
         <p style="margin-top: 30px">
-          The menu is going to have 3 options, namely<br />1: PLAY<br />2:
+          The menu is going to have 3 buttons, namely<br />1: PLAY<br />2:
           TUTORIAL<br />3: LEADERBOARD
+        </p>
+        <p style="margin-top: 30px">
+          <b>1: PLAY</b><br />
+          Play will start the game. The game will be of five levels. And the end
+          of 5th level total points will be calculated which be used for ranking
+          the players.
+          <a href="#game-mode" style="text-decoration: none; color: #516beb"
+            >More Detials</a
+          >
+        </p>
+        <p style="margin-top: 30px">
+          <b>2: TUTORIAL</b><br />
+          This will start the tour of the game. Showing all the rules and
+          regulations to finish the game.
+        </p>
+        <p style="margin-top: 30px">
+          <b>3: LEADERBOARD</b><br />
+          This is the players where the players rankings will be showin in
+          ascending order.
         </p>
       </div>
     </div>
 
-    <div class="slide" style="background-color: white"></div>
-
-    <div class="slide" style="background-color: #fffcdc"></div>
+    <div class="slide" style="background-color: white" id="game-mode">
+      <div class="content">
+        <h1>GAME MODE</h1>
+        <p style="margin-top: 30px">
+          Our game mode is going to be made up of multiple components like
+          levels, timer, hints, results, etc.
+        </p>
+        <p style="margin-top: 30px">
+          Clicking PLAY in MAIN MENU will start our gamemode. By defualt it will
+          start from first level For first level a sheet will be shown for
+          14secs he can either wait for timer to finish automatically or also
+          move forward if he remembered everything and wants to move on to the
+          level. For second level it will be 18secs and so on ( i.e. sheet time
+          incremented by 4).
+          <br /><br />
+          After the sheet timer, player will start visiting the addresses where
+          he has to choose the correct package to deliver and gain points. After
+          the last address the level score will be calculated which will be
+          added to the overall score.
+          <br /><br />
+          From level 2 onwards a hint option will be shown to the player which
+          will show the pending delivery address and their package names for
+          5secs. Level 2 will have 1 hint, Level 3 will have 2 hint and so on.
+          Using 1 hint will deduct 40 points from overall points.
+          <br /><br />
+          After all levels are completed a performance result will be shown to
+          the player. His overall points will be used to place him on the
+          leaderboard. They player can play for infinite number of times to
+          break his or someone else record.
+          <br /><br />
+        </p>
+      </div>
+    </div>
   </body>
 
   <script></script>

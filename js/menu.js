@@ -1,4 +1,4 @@
-// import beginPlay from "./play.js";
+import beginPlay from "./play.js";
 
 var menuState = "LEADERBOARD"; // MENU  TUTORIAL LEADERBOARD PLAY
 //var playState = "SHEET"; // ARE_YOU_READY SHEET LEVEL HINTS RESULT
@@ -16,8 +16,9 @@ function changeToDefaultMenu() {
             `;
   document
     .getElementById("leaderboard")
-    .addEventListener("click", changeToLeaderboard);
-  document.getElementById("play").addEventListener("click", beginPlay);
+    .addEventListener("click", () => changeToLeaderboard());
+  document.getElementById("play").addEventListener("click", () => beginPlay());
+  console.log("Change To Default");
 }
 
 function changeToLeaderboard() {
@@ -58,6 +59,6 @@ function changeToLeaderboard() {
     `;
   document
     .getElementById("main-menu")
-    .addEventListener("click", changeToDefaultMenu);
+    .addEventListener("click", () => changeToDefaultMenu());
 }
 changeToDefaultMenu();

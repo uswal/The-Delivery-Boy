@@ -16,7 +16,7 @@
         <a href="index.html" id="n1">HOME</a>
         <a href="login.html" id="n2">LOGIN</a>
         <a href="about.html" id="n3">ABOUT</a>
-        <a href="#" id="n4">APP</a>
+        <a href="app.html" id="n4" target="_blank">APP</a>
       </div>
     </nav>
 
@@ -24,7 +24,6 @@
   </head>
 
   <body id="body" style="display: flex; flex-direction: column">
-
     <div class="slide" id="s1">
       <div class="content">
         <center class="col-flex">
@@ -44,34 +43,105 @@
     </div>
 
     <div class="slide" style="background-color: white">
-      <div  class="content col-flex">
+      <div class="content col-flex">
         <div class="row-flex">
-          <div style="width: 50%;"> 
-            <div style=" position: relative; top:50%; transform: translateY(-50%);">         
+          <div style="width: 50%">
+            <div
+              style="position: relative; top: 50%; transform: translateY(-50%)"
+            >
               <h1>POINTERS</h1>
-              <p style="margin-top:30px">
+              <p style="margin-top: 30px">
                 A pointer is a variable whose value is the address of another
                 variable, i.e., direct address of the memory location. Like any
                 variable or constant, you must declare a pointer before using it
                 to store any variable address.
-              </div> 
-            </div>
-            <div style="width: 50%;">
-              <img style="height: 150px; width: 334px; margin:40px 50px" src="assets/s2_p1.png" />
-  
-              <img style="width: 403px; height: 200px; margin:40px 50px" src="assets/s2_p2.png" />
+              </p>
+              <p style="margin-top: 30px">
+                The difficulty we usually have with POINTERS has much to do with
+                C's pointer terminology than the actual concept. It is difficult
+                to get a grip on Pointers just by listening to a discussion on
+                Pointers, therefore to overcome this difficulty the three of us
+                as team have come up with an idea to demonstrate the working of
+                pointers through a simple game which has been developed keeping
+                in mind the idea of replicating the most fundamental and simple
+                programming concepts involved in pointers.
+              </p>
             </div>
           </div>
-          
+          <div style="width: 50%">
+            <img
+              style="height: 150px; width: 334px; margin: 40px 50px"
+              src="assets/s2_p1.png"
+            />
+
+            <img
+              style="width: 403px; height: 200px; margin: 40px 50px"
+              src="assets/s2_p2.png"
+            />
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="slide" style="background-color: #fffcdc"></div>
+    <div class="slide" style="background-color: #fffcdc">
+      <div class="content">
+        <h1>How are we demonstrating concept of pointers though our game?</h1>
 
-    <div class="slide" style="background-color: white"></div>
+        <p style="margin-top: 30px">
+          Our player is acting like a pointer which is pointing towards other
+          pointer(ADDRESS) and we are updating its value accordingly. Each
+          ADDRESS is also acting like a pointer variable which is pointing to a
+          specific PACKAGE_NAME. But since it's a game we can't show the package
+          name directly else it won't be fun.
+        </p>
+        <p style="margin-top: 30px">
+          A sheet will be shown for a breif moment containing ADDRESS and
+          PACKAGE_NAME. In that breif moment he has to remember the ADDRESS and
+          their corresponding PACKAGE_NAME. Whenever he will visit the address
+          he has to choose the correct package from his bag. For correct package
+          he will be awarded points but for wrong package points will be also
+          deducted. He can also choose "not to deliver" for which he won't be
+          getting or loosing any points.
+          <a href="#rules" style="text-decoration: none; color: #516beb"
+            >Read rules</a
+          >
+          for more details.
+        </p>
+      </div>
+    </div>
 
-    <div class="slide" style="background-color: #fffcdc"></div>
+    <div class="slide" id="rules" style="background-color: white">
+      <div class="content">
+        <h1>Rules in our game!</h1>
+        <p style="margin-top: 30px">
+          <b>1: </b>There are going to be 5 levels. Each level completion will
+          award 1000points. Acing the level will award 1200points.
+        </p>
+        <p style="margin-top: 30px">
+          <b>2: </b>From level-2 hints option will be available. Using it will
+          cost 40points from overall points.
+        </p>
+        <p style="margin-top: 30px">
+          <b>3: </b> Each correct delivery will award 100points. Each incorrect
+          delivery will penalize 30points. Not delivering anything will not
+          award or penalize any points.
+        </p>
+        <p style="margin-top: 30px">
+          <b>4: </b>Player will be stopping for 10secs on each address.
+          Selecting the package early will award bonus points. Say, out of 10
+          secs he selects the PACKAGE_NAME in 3 secs, so he will be awarded
+          (10-3)*10 = 70points(bonus). Exceeding this 10sec time limit will be
+          considered as out of schedule which will penalize 20points.
+        </p>
+        <p style="margin-top: 30px">
+          <b>5: </b>Overall points will be the total points from all the levels
+          and bonuses which will be used in ranking player on leaderboard.
+        </p>
+        <p style="margin-top: 50px">
+          Have fun playing and competing with your friends.
+        </p>
+      </div>
+    </div>
   </body>
 
   <script></script>
