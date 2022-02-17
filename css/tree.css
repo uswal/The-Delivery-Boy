@@ -1,0 +1,13 @@
+#s2-title {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content .tile {
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
