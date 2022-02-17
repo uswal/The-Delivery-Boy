@@ -1,5 +1,6 @@
 import beginPlay from "./play.js";
 
+console.log("JS LOADED?");
 var menuState = "LEADERBOARD"; // MENU  TUTORIAL LEADERBOARD PLAY
 //var playState = "SHEET"; // ARE_YOU_READY SHEET LEVEL HINTS RESULT
 const frame = document.getElementById("frame");

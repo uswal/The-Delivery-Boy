@@ -1,8 +1,14 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(/assets/fonts/Montserrat-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: Montserrat;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -14,6 +20,7 @@ body {
 
 div.slide {
   scroll-snap-align: start;
+  transition-duration: 0.4s;
 }
 
 .col-flex {
