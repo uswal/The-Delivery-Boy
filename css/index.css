@@ -146,3 +146,12 @@ nav #n5 {
   left: 10px;
   z-index: 0;
 }
+
+.link-hover {
+  transition-duration: 0.3s;
+  color: #516beb;
+  text-decoration: none;
+}
+.link-hover:hover {
+  color: #3b4daa;
+}
