@@ -124,17 +124,20 @@ nav #n1 {
 }
 
 nav #n2 {
-  transform: translate(150px, 100px);
+  transform: translate(150px, 90px);
 }
 
 nav #n3 {
-  transform: translate(150px, 160px);
+  transform: translate(150px, 140px);
 }
 
 nav #n4 {
-  transform: translate(150px, 220px);
+  transform: translate(150px, 190px);
 }
 
+nav #n5 {
+  transform: translate(150px, 240px);
+}
 .nav-logo {
   position: fixed;
   height: 100px;

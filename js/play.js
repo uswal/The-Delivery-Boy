@@ -9,7 +9,7 @@ var pairs = {};
 const frame = document.getElementById("frame");
 
 function beginPlay() {
-  currentLevel = 1;
+  currentLevel = 5;
   playState = "ASK_READY";
   askReady();
   generateData();
