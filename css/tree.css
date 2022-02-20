@@ -1,13 +1,152 @@
-#s2-title {
-  left: 50%;
-  transform: translateX(-50%);
+#s2 .design {
+  height: 100%;
+  line-height: 5em;
 }
 
-.content .tile {
+#s2 .box {
+  border: 1px solid grey;
   padding: 10px 20px;
-  font-size: 24px;
-  font-weight: bold;
-  position: absolute;
+  font-size: 20px;
+  position: relative;
+  z-index: 100;
+  background-color: white;
+}
+
+#tree-title {
+  top: 50%;
+  left: 50%;
+  font-weight: 900;
+}
+#comp-1 {
+  margin-left: 150px;
+}
+#comp-2 {
+  margin-left: 25vw;
+}
+#menu-line {
   border: 2px solid grey;
+  position: absolute;
+  width: 230px;
+  left: 370px;
+  height: 140px;
+  top: 62px;
+  border-top: none;
+  border-left: none;
+  z-index: 10;
+}
+#gamemode-line {
+  border-top: 2px solid grey;
+  width: 180px;
+  position: absolute;
+  top: 202px;
+  left: 600px;
+  z-index: 10;
+}
+.box2 {
+  margin-right: 20px;
+}
+#sub-line-1 {
+  width: 500px;
+  height: 80px;
+  border-left: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-top: 2px solid grey;
+  position: absolute;
+  left: 100px;
+  top: 202px;
+  z-index: 1;
+}
+#sub-line-2 {
+  width: 500px;
+  height: 160px;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-top: 2px solid grey;
+  position: absolute;
+  left: 580px;
+  top: 202px;
+  z-index: 1;
+}
+#dot1 {
+  width: 10px;
+  height: 10px;
   border-radius: 10px;
+  background-color: grey;
+  position: absolute;
+  top: 190px;
+  left: 596px;
+  z-index: 90;
+  animation: dot1 12s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes dot1 {
+  0% {
+    top: 66px;
+    left: 596px;
+  }
+  100% {
+    top: 190px;
+    left: 596px;
+  }
+}
+#dot2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #516beb;
+  position: absolute;
+  top: 280px;
+  left: 410px;
+  z-index: 90;
+  animation: dot2 12s infinite;
+  animation-timing-function: linear;
+}
+@keyframes dot2 {
+  0% {
+    top: 198px;
+    left: 580px;
+  }
+  50% {
+    top: 198px;
+    left: 96px;
+  }
+  60% {
+    top: 280px;
+    left: 96px;
+  }
+  100% {
+    top: 280px;
+    left: 410px;
+  }
+}
+#dot3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #516beb;
+  position: absolute;
+  top: 360px;
+  left: 600px;
+  z-index: 90;
+  animation: dot3 12s infinite;
+  animation-timing-function: linear;
+}
+@keyframes dot3 {
+  0% {
+    top: 198px;
+    left: 606px;
+  }
+  45% {
+    top: 198px;
+    left: 1076px;
+  }
+  70% {
+    top: 360px;
+    left: 1076px;
+  }
+  100% {
+    top: 360px;
+    left: 600px;
+  }
 }
