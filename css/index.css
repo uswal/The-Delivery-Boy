@@ -38,7 +38,15 @@ div.slide {
   height: 100vh; /* */
   overflow: hidden;
 }
-
+.slide .content:hover {
+  border-color: #516beb;
+}
+.slide .content:hover .make-me-blue {
+  color: #516beb;
+}
+.make-me-blue {
+  transition-duration: 0.4s;
+}
 .slide .content {
   position: relative;
   top: 50%;
@@ -47,8 +55,9 @@ div.slide {
   padding: 0 120px;
   width: calc(70% - 40px);
   /* background-color: rgba(255, 255, 0, 0.144); */
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  transition-duration: 0.4s;
 }
 /* SLIDE 1 */
 #s2-img {
