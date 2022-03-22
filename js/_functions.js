@@ -21,4 +21,13 @@ function shuffle(array) {
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
-export { shuffle, randomNumber };
+
+function getRadioValue(name) {
+  var ele = document.getElementsByName(name);
+
+  for (var i = 0; i < ele.length; i++) {
+    if (ele[i].checked) return ele[i].value;
+  }
+}
+
+export { shuffle, randomNumber, getRadioValue };

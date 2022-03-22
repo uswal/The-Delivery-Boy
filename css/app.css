@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Montserrat;
-  src: url(/assets/fonts/Montserrat-Regular.ttf);
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf");
 }
 
 * {
@@ -8,9 +8,10 @@
   padding: 0;
   font-family: Montserrat;
 }
+
 .row-flex {
   display: flex;
-  flex-direction: rpw;
+  flex-direction: row;
 }
 .col-flex {
   display: flex;
@@ -57,7 +58,7 @@ body .leaderboard td {
 
 body .leaderboard table {
   border-bottom: 1px solid grey;
-  padding: 10px 0;
+  padding: 0 0;
 }
 body .container button {
   outline: none;
@@ -72,17 +73,17 @@ body .leaderboard button {
 }
 
 body .sheet th {
-  font-size: 28px;
+  font-size: 26px;
   border: 1px solid grey;
 }
 
 body .sheet #timer {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 900;
 }
 body .sheet td {
-  padding: 10px 0;
-  font-size: 20px;
+  padding: 4px 0;
+  font-size: 18px;
   border: 1px solid grey;
 }
 body .sheet table {
@@ -100,4 +101,105 @@ body .sheet table {
 
 .Failed {
   color: red;
+}
+
+.level {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.level .img {
+  width: 300px;
+  position: absolute;
+  /* left: 0; */
+  bottom: 10px;
+  transition-duration: 2s;
+  animation: logo-ani 3s;
+}
+
+@keyframes logo-ani {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 80vw;
+    opacity: 0;
+  }
+}
+
+@keyframes msg-ani {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#loading-msg {
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  animation: msg-ani 3s;
+}
+
+.level .quiz {
+  display: flex;
+  flex-direction: row;
+}
+
+.level .quiz .section {
+  width: 500px;
+  height: 500px;
+  /* background-color: pink; */
+  /* border: 1px solid grey; */
+}
+
+.level .quiz .section .package {
+  width: calc(50% - 20px);
+  padding: 10px;
+  border: 1px solid grey;
+  margin: 2px;
+  transition-duration: 0.3s;
+}
+
+.level .quiz .section .package:hover {
+  background-color: #516beb;
+  color: white;
+  border-color: #516beb;
+}
+
+.level .quiz .section .delivered-package {
+  background-color: green;
+  color: white;
+}
+.level .quiz .section .active {
+  background-color: #516beb;
+  color: White;
+}
+
+.level .quiz .section button {
+  margin-top: 10px;
+  background-color: #516beb;
+  color: white;
+  font-size: 20px;
+  padding: 4px 0;
+  transition-duration: 0.3s;
+}
+
+.level .quiz .section button:hover {
+  background-color: green;
+}
+
+.level .hidden-radios {
+  /* opacity: 0; */
 }
