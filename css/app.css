@@ -245,6 +245,7 @@ body .sheet {
   margin: 40px 0;
   font-size: 24px;
   font-weight: 900;
+  color: #516beb;
 }
 
 .level .points-msg {
@@ -255,6 +256,7 @@ body .sheet {
 .level .points-total {
   margin-top: 40px;
   font-weight: bold;
+  font-size: 24px;
 }
 
 .level .points-next {
@@ -285,7 +287,7 @@ body .sheet {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* animation: congo 2s; */
+  animation: congo 2s;
   animation-timing-function: ease-out;
 }
 

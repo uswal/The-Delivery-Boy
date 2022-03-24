@@ -158,7 +158,7 @@ function startLevel() {
     <div class="container">
     <div class="level col-flex">
       <label class="points-hdr">POINTS HISTORY</label>
-      <div class="col-flex" style="height: 70vh; overflow-y: auto">
+      <div class="col-flex" style="height: 65vh; overflow-y: auto">
       ${list}
       </div>
       <label class="points-total">TOTAL = ${score} points</label>
