@@ -9,7 +9,7 @@ function changeToDefaultMenu() {
   menuState = "MENU";
   frame.innerHTML = `
             <div class="container col-flex menu">
-            <label class="header">MENU</label>
+            <label class="header" id="hdr">MENU</label>
             <label class="big-option" id="play">PLAY</label>
             <label class="big-option">TUTORIAL</label>
             <label class="big-option" id="leaderboard">LEADERBOARD</label>
@@ -63,3 +63,5 @@ function changeToLeaderboard() {
     .addEventListener("click", () => changeToDefaultMenu());
 }
 changeToDefaultMenu();
+
+export { changeToDefaultMenu };

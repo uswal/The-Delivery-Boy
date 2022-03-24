@@ -14,50 +14,15 @@
   <body id="frame">
     <div class="container">
       <div class="level">
-        <div
-          class="quiz"
-          style="
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          "
-        >
-          <div class="section col-flex">
-            <label style="font-size: 24px; margin: 50px 0"
-              >You have reached 50000!</label
-            >
-            <img src="assets/house.png" style="width: 50%; padding-left: 25%" />
-            <label style="font-size: 24px; margin: 50px 0"
-              >Select the package!</label
-            >
-          </div>
-          <div class="section col-flex">
-            <div class="row-flex">
-              <div
-                class="package"
-                id="p1"
-                onclick="document.getElementById('o1').checked = true;document.getElementById('p2').classList.remove('active');"
-              >
-                PACKAGE1
-              </div>
-              <div
-                class="package active"
-                id="p2"
-                onclick="document.getElementById('o2').checked = true"
-              >
-                PACKAGE2
-              </div>
-            </div>
-            <button
-              onclick="console.log(document.getElementsByName('option').value)"
-            >
-              SUBMIT
-            </button>
-          </div>
-          <div class="hidden-radios">
-            <input type="radio" name="option" id="o1" value="1" disabled />
-            <input type="radio" name="option" id="o2" value="2" disabled />
+        <div class="center">
+          <label
+            >CONGRATULATIONS!<br />
+            YOU HAVE FINISHED THE GAME WITH A TOTAL OF <br /><b>5000 POINTS!</b>
+            <br
+          /></label>
+          <div>
+            <button id="new-game">NEW GAME</button
+            ><button id="main-menu">MAIN MENU</button>
           </div>
         </div>
       </div>
