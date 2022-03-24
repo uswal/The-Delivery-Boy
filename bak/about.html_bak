@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>About</title>
     <link rel="stylesheet" href="css/index.css" />
     <!-- <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
@@ -14,29 +14,28 @@
     <nav>
       <div class="ctr">
         <a href="index.html" id="n1">HOME</a>
-        <a href="basics.html" id="n2">BASICS</a>
-        <a href="about.html" id="n3">ABOUT</a>
-        <a href="feedback.html" id="n4">FEEDBACK</a>
-        <a href="login.html" id="n5">LOGIN</a>
-        <a href="app.html" id="n6" target="_blank">APP</a>
+        <a href="login.html" id="n2">LOGIN</a>
+        <a href="feedback.html" id="n3">FEEDBACK</a>
+        <a href="about.html" id="n4">ABOUT</a>
+        <a href="app.html" id="n5" target="_blank">APP</a>
       </div>
     </nav>
 
     <!-- <img class="nav-logo" src="assets/nav_logo.png" /> -->
   </head>
 
-  <body style="display: flex; flex-direction: static">
+  <body style="display: flex; flex-direction: column">
     <div class="slide" id="s1">
       <div class="content">
         <center class="col-flex">
-          <!-- <h1
+          <h1
             style="font-weight: 900; padding-bottom: 120px"
             class="make-me-blue"
           >
-            About Us
-          </h1> -->
-          <center><img src="assets/image(2).jpg" style="height:80vh" /></center>
-          <!--<label class="col-flex">
+            ABOUT
+          </h1>
+          <center><img id="s1-logo" src="assets/plan.svg" /></center>
+          <label class="col-flex">
             <label
               style="
                 padding-bottom: 20px;
@@ -46,7 +45,7 @@
               "
               >THE DELIVERY BOY</label
             >
-          </label>-->
+          </label>
         </center>
       </div>
     </div>
@@ -57,7 +56,7 @@
       </div>
     </div> -->
 
-    <!--<div class="slide" id="s2" style="background-color: white; display: block">
+    <div class="slide" id="s2" style="background-color: white; display: block">
       <div class="content">
         <div class="design">
           <center>
@@ -74,9 +73,9 @@
               >THE DELIVERY BOY</span
             >
           </center>
-          <br />-->
+          <br />
 
-          <!--<span id="comp-1" class="box">THE GAME</span>
+          <span id="comp-1" class="box">MENU</span>
           <span id="comp-2" class="box">GAME MODE</span><br />
           <span id="sub-comp-1" class="box box2">PLAY</span>
           <span id="sub-comp-2" class="box box2">TUTORIAL</span>
@@ -94,7 +93,7 @@
 
           <span id="dot1"></span>
           <span id="dot2"></span>
-          <span id="dot3"></span>-->
+          <span id="dot3"></span>
         </div>
       </div>
       <link rel="stylesheet" href="css/tree.css" />
@@ -102,17 +101,19 @@
 
     <div class="slide" style="background-color: #fffcdc">
       <div class="content">
-        <h1 class="make-me-blue" >ABOUT US </h1>
-        <!---<p style="margin-top: 30px">
-         <br />1: PLAY<br />2:
-          TUTORIAL<br />3: LEADERBOARD
-        </p>-->
+        <h1 class="make-me-blue">MENU</h1>
         <p style="margin-top: 30px">
-          <!---<b class="make-me-blue"> THE GAME.</b><br />-->
-         The four of us are enthusiastic students who are driven by a mindset of wanting to learn and performing to the best of our capabilities. 
-          <!--<a href="#game-mode" class="link-hover">More Details</a>
-        </p>-->
-        <!---<p style="margin-top: 30px">
+          The menu is going to have 3 buttons, namely<br />1: PLAY<br />2:
+          TUTORIAL<br />3: LEADERBOARD
+        </p>
+        <p style="margin-top: 30px">
+          <b class="make-me-blue">1: PLAY</b><br />
+          Play will start the game. The game will be of five levels. And the end
+          of 5th level total points will be calculated which be used for ranking
+          the players.
+          <a href="#game-mode" class="link-hover">More Detials</a>
+        </p>
+        <p style="margin-top: 30px">
           <b class="make-me-blue">2: TUTORIAL</b><br />
           This will start the tour of the game. Showing all the rules and
           regulations to finish the game.
@@ -120,40 +121,43 @@
         <p style="margin-top: 30px">
           <b class="make-me-blue">3: LEADERBOARD</b><br />
           This is the players where the players rankings will be showin in
-          ascending order.-->
+          ascending order.
         </p>
       </div>
     </div>
 
-   <!-- <div class="slide" style="background-color: white" id="game-mode">
+    <div class="slide" style="background-color: white" id="game-mode">
       <div class="content">
         <h1 class="make-me-blue">GAME MODE</h1>
-        <!--<p style="margin-top: 30px">
-          Our game mode is going to be made up of multiple components like
-          levels, timer, hints, results, etc.-->
-        <!--</p>
         <p style="margin-top: 30px">
-          Hey!! We're Delighted you made it this far.
-          <br> <br>
-          A few important points about the game:
-          <br> <br>
-          -> In the first level a sheet will be shown for 14 seconds from which you must remember the details which will contain the address to which the package must be delivered.
-          <br>
-          -> In Level 2 the sheet will be displayed for an additional 4 seconds.
-          <br>
-
-          -> Hints will be displayed at every level , however for each time you make use of a hint 40 points will be deducted.
-          <br>
-
-                    
-          -> That's it from us. You'll figure out the rest as you keep playing.
-          
+          Our game mode is going to be made up of multiple components like
+          levels, timer, hints, results, etc.
+        </p>
+        <p style="margin-top: 30px">
+          Clicking PLAY in MAIN MENU will start our gamemode. By defualt it will
+          start from first level For first level a sheet will be shown for
+          14secs he can either wait for timer to finish automatically or also
+          move forward if he remembered everything and wants to move on to the
+          level. For second level it will be 18secs and so on ( i.e. sheet time
+          incremented by 4).
           <br /><br />
-          
-          
+          After the sheet timer, player will start visiting the addresses where
+          he has to choose the correct package to deliver and gain points. After
+          the last address the level score will be calculated which will be
+          added to the overall score.
+          <br /><br />
+          From level 2 onwards a hint option will be shown to the player which
+          will show the pending delivery address and their package names for
+          5secs. Level 2 will have 1 hint, Level 3 will have 2 hint and so on.
+          Using 1 hint will deduct 40 points from overall points.
+          <br /><br />
+          After all levels are completed a performance result will be shown to
+          the player. His overall points will be used to place him on the
+          leaderboard. They player can play for infinite number of times to
+          break his or someone else record.
           <br /><br />
         </p>
-      </div-->
+      </div>
     </div>
   </body>
 

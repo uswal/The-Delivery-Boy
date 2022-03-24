@@ -113,7 +113,7 @@ nav:hover .ctr a {
 nav a {
   position: absolute;
   border: 1px solid #516beb;
-  padding: 6px 14px;
+  padding: 4px 14px;
   color: #516beb;
   font-size: 16px;
   text-decoration: none;
@@ -129,23 +129,27 @@ nav a:hover {
   border-left-width: 12px;
 }
 nav #n1 {
-  transform: translate(150px, 40px);
+  transform: translate(150px, 26px);
 }
 
 nav #n2 {
-  transform: translate(150px, 90px);
+  transform: translate(150px, 70px);
 }
 
 nav #n3 {
-  transform: translate(150px, 140px);
+  transform: translate(150px, 114px);
 }
 
 nav #n4 {
-  transform: translate(150px, 190px);
+  transform: translate(150px, 156px);
 }
 
 nav #n5 {
-  transform: translate(150px, 240px);
+  transform: translate(150px, 200px);
+}
+
+nav #n6 {
+  transform: translate(150px, 244px);
 }
 .nav-logo {
   position: fixed;
