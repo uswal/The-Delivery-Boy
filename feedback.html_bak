@@ -7,57 +7,6 @@
     <title>Feedback form</title>
     <link rel="stylesheet" href="css/temp3.css" />
     <link rel="stylesheet" href="css/index.css" />
-
-    <script>
-      
-      function check1()
-      {
-        var a=document.getElementById("name").value;
-        var regx=/^([a-z]+) ([a-z]+?)$/i;
-        if(regx.test(a))
-        {
-            document.getElementById("name").style.background="green";
-        }
-        else
-        {
-          document.getElementById("name").style.background="red";
-        }
-      }
-
-
-      function check2()
-      {
-        var a=document.getElementById("number").value;
-        var regx=/^[6-9]\d{9}$/;
-        if(regx.test(a))
-        {
-            document.getElementById("number").style.background="green";
-        }
-        else
-        {
-          document.getElementById("number").style.background="red";
-        }
-      }
-
-      function check3()
-      {
-        var a=document.getElementById("email").value;
-        var regx=/\S+@\S+\.\S+/
-        if(regx.test(a))
-        {
-            document.getElementById("email").style.background="green";
-        }
-        else
-        {
-          document.getElementById("email").style.background="red";
-        }
-      }
-
-      
-
-    </script>
-
-  </head>
 <body>
 
 
@@ -86,27 +35,24 @@
           </div>
           <div class="app-contact"> Write to us at webprojectdelivery@protonmail.com</div>
         </div>
-        <form action="">
         <div class="screen-body-item">
           <div class="app-form">
             <div class="app-form-group">
-              <input type="text"  placeholder="NAME" id="name" onmouseout="check1()">
+              <input class="app-form-control" placeholder="NAME" value="Name">
             </div>
             <div class="app-form-group">
-              <input type="text" placeholder="EMAIL" id="email" onmouseout="check3()">
+              <input class="app-form-control" placeholder="EMAIL">
             </div>
             <div class="app-form-group">
-              <input type="text" placeholder="CONTACT NO" id="number" onmouseout="check2()">
+              <input class="app-form-control" placeholder="CONTACT NO">
             </div>
-            <label for="name" style="visibility: hidden;" id="lable">wrong input </label>
             <div class="app-form-group message">
-              <input type="text" placeholder="SUGGESTIONS" id="suggestion">
+              <input class="app-form-control" placeholder="SUGGESTIONS ">
             </div>
             <div class="app-form-group buttons">
               <button class="app-form-button">CANCEL</button>
-              <input type="submit" value="submit">
+              <button class="app-form-button">SEND</button>
             </div>
-          </form>
           </div>
         </div>
       </div>

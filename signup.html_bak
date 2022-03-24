@@ -4,61 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="css/index.css" />
     <!-- <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     /> -->
-
-    <script>
-
-      var values=["name must not have numbers","Minimum eight characters, at least one letter and one number:"]
-
-      
-
-        function check1()
-      {
-        var a=document.getElementById("name").value;
-        var regx=/^([a-z]+) ([a-z]+?)$/i;
-        if(regx.test(a))
-        {
-            document.getElementById("name").style.background="green";
-        }
-        else
-        {
-          document.getElementById("name").style.background="red";
-          document.getElementById("message").value=values[0];
-
-        }
-      }
-
-      function check2()
-      {
-        var a=document.getElementById("pass").value;
-        var regx=/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-        if(regx.test(a))
-        {
-            document.getElementById("pass").style.background="green";
-        }
-        else
-        {
-          document.getElementById("pass").style.background="red";
-          document.getElementById("message").value=values[1];
-
-        }
-      }
-
-
-    </script>
-
-
   </head>
   <body>
     <nav>
       <div class="ctr">
         <a href="index.html" id="n1">HOME</a>
-        <a href="signup.html" id="n2">SIGNUP</a>
+        <a href="login.html" id="n2">LOGIN</a>
         <a href="feedback.html" id="n3">FEEDBACK</a>
         <a href="about.html" id="n4">ABOUT</a>
         <a href="app.html" id="n5" target="_blank">APP</a>
@@ -84,24 +41,25 @@
           font-weight: 800;
           margin-bottom: 20px;
         "
-        >LOGIN</label
+        >SIGNUP</label
       >
-      <label>Enter Nickname:</label>
-      <input type="text" placeholder="Nickname" id="name" onmouseout="check1()">
-      <label style="margin-top: 20px">Enter Password:</label>
+      <label>New Nickname:</label>
+      <input type="text" placeholder="Nickname" />
+      <label style="margin-top: 20px">Create Password:</label>
       <input
         style="margin-bottom: 20px"
-        type="text"
+        type="password"
         placeholder="Password"
-        id="pass"
-        onmouseout="check2()"
       />
-      <label>New? <a href="signup.html">Create an account!</a></label>
-      <button>LOGIN</button>
-    </div>
+      <label style="margin-top: 0">Re-Enter Password:</label>
+      <input
+        style="margin-bottom: 20px"
+        type="password"
+        placeholder="Re-Enter Password"
+      />
 
-    <div style="float: right;">
-     <textarea name="text" id="message" cols="30" rows="10"></textarea>
+      <label>Already registered? <a id="l" href="login.html">Login!</a></label>
+      <button>SIGNUP</button>
     </div>
   </body>
   <style>

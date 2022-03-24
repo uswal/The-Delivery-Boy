@@ -10,6 +10,35 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     /> -->
+
+    <script>
+      var values = [
+        "name must not have numbers",
+        "Minimum eight characters, at least one letter and one number:",
+      ];
+
+      function check1() {
+        var a = document.getElementById("name").value;
+        var regx = /^([a-z]+) ([a-z]+?)$/i;
+        if (regx.test(a)) {
+          document.getElementById("name").style.background = "green";
+        } else {
+          document.getElementById("name").style.background = "red";
+          document.getElementById("message").value = values[0];
+        }
+      }
+
+      function check2() {
+        var a = document.getElementById("pass").value;
+        var regx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        if (regx.test(a)) {
+          document.getElementById("pass").style.background = "green";
+        } else {
+          document.getElementById("pass").style.background = "red";
+          document.getElementById("message").value = values[1];
+        }
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -44,15 +73,26 @@
         >LOGIN</label
       >
       <label>Enter Nickname:</label>
-      <input type="text" placeholder="Nickname" />
+      <input
+        type="text"
+        placeholder="Nickname"
+        id="name"
+        onmouseout="check1()"
+      />
       <label style="margin-top: 20px">Enter Password:</label>
       <input
         style="margin-bottom: 20px"
         type="password"
         placeholder="Password"
+        id="pass"
+        onmouseout="check2()"
       />
       <label>New? <a href="signup.html">Create an account!</a></label>
       <button>LOGIN</button>
+    </div>
+
+    <div style="float: right">
+      <textarea name="text" id="message" cols="30" rows="10"></textarea>
     </div>
   </body>
   <style>
