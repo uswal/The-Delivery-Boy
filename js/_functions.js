@@ -30,4 +30,10 @@ function getRadioValue(name) {
   }
 }
 
-export { shuffle, randomNumber, getRadioValue };
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+export { shuffle, randomNumber, getRadioValue, getCookie };

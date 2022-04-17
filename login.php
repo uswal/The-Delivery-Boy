@@ -39,19 +39,64 @@
         }
       }
     </script>
+
+    <script>
+      //ujjwal's
+      function resetRedBorders(nickname, pass) {
+        nickname.style.borderColor = "black";
+        pass.style.borderColor = "black";
+      }
+      function validate() {
+        const nickname = document.getElementById("name");
+        const pass = document.getElementById("pass");
+
+        const err = document.getElementById("err");
+
+        resetRedBorders(nickname, pass);
+        if (!/^\w+$/.test(nickname.value)) {
+          err.innerHTML =
+            "Nickname may only contain underscore, letters and numbers.";
+          nickname.style.borderColor = "red";
+
+          return false;
+        }
+        if (pass.value.length < 6) {
+          pass.style.borderColor = "red";
+          err.innerHTML = "Password should be greater than 6 characters.";
+          return false;
+        }
+        if (pass.value.length > 18) {
+          pass.style.borderColor = "red";
+          err.innerHTML = "Password should be smaller than 18 characters.";
+          return false;
+        }
+
+        err.innerHTML = "";
+      }
+    </script>
   </head>
   <body>
+  
+
     <nav>
       <div class="ctr">
-        <a href="index.html" id="n1">HOME</a>
-        <a href="basics.html" id="n2">BASICS</a>
-        <a href="about.html" id="n3">ABOUT</a>
-        <a href="feedback.html" id="n4">FEEDBACK</a>
-        <a href="signup.html" id="n5">SIGNUP</a>
-        <a href="app.html" id="n6" target="_blank">APP</a>
+        <a href="index.php" id="n1">HOME</a>
+        <a href="basics.php" id="n2">BASICS</a>
+        <a href="about.php" id="n3">ABOUT</a>
+        <a href="feedback.php" id="n4">FEEDBACK</a>
+        <a href="signup.php" id="n5">SIGNUP</a>
+        <a href="app.php" id="n6" target="_blank">APP</a>
       </div>
     </nav>
-    <div class="container col-flex" id="container">
+
+
+    <form
+      action="login.php"
+      method="post"
+      class="container col-flex"
+      id="container"
+      onsubmit="return validate()"
+    >
       <label
         style="
           padding: 12px 0;
@@ -73,12 +118,13 @@
         "
         >LOGIN</label
       >
-      <label>Enter Nickname:</label>
+      <label>Enter Username:</label>
       <input
         type="text"
-        placeholder="Nickname"
+        placeholder="Username"
         id="name"
-        onmouseout="check1()"
+        onmouseout="//check1()"
+        name = "nick"
       />
       <label style="margin-top: 20px">Enter Password:</label>
       <input
@@ -86,15 +132,55 @@
         type="password"
         placeholder="Password"
         id="pass"
-        onmouseout="check2()"
+        onmouseout="//check2()"
+        name = "pass" 
       />
-      <label>New? <a href="signup.html">Create an account!</a></label>
-      <button>LOGIN</button>
-    </div>
+      <label id="err" style="color: red">
+<?php
+  
+  require 'config.php';
+  if(!empty($_POST)) {
+    $nick = $_REQUEST['nick'];
+    $pass = $_REQUEST['pass'];
+    $pass = hash('sha256', $pass);
+    $conn = new mysqli($host,$username,$password,$db);
 
-    <div style="float: right">
+    if($conn->connect_error) die("Connection failed".$connect_error."<br>");
+
+    $sql = "SELECT * FROM user WHERE nick = '$nick';";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+      echo "Success!";
+      //echo $row['nick'];  
+      setcookie('user', $row['nick'], time() + (86400 * 30), "/");   
+      
+    } else {
+      echo "Username and Password didn't match!";
+    }
+
+    $conn->close();
+    
+  }
+
+?>
+    
+    </label>
+<script>
+  err = document.getElementById("err");
+  if(err.innerHTML.trim() === "Success!") {
+    window.location.href = "app.php";
+  }
+</script>
+      <label>New? <a href="signup.html">Create an account!</a></label>
+      <!-- <button>LOGIN</button> -->
+      <input class="button" type="submit" value="LOGIN" />
+    </form>
+
+    <!-- <div style="float: right">
       <textarea name="text" id="message" cols="30" rows="10"></textarea>
-    </div>
+    </div> -->
   </body>
   <style>
     * {
@@ -137,7 +223,7 @@
     body .container input:focus {
       border-color: #516beb;
     }
-    body .container button {
+    body .container .button {
       margin-top: 20px;
       padding: 8px 0;
       outline: none;
@@ -148,7 +234,7 @@
       font-size: 18px;
       transition-duration: 0.4s;
     }
-    body .container button:hover {
+    body .container .button:hover {
       background-color: green;
     }
     body .container a {

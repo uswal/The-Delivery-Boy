@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,19 +52,68 @@
         }
       }
     </script>
+
+    <script>
+      //Ujjwal's
+
+      function resetRedBorders(nickname, pass, repass) {
+        nickname.style.borderColor = "black";
+        pass.style.borderColor = "black";
+        repass.style.borderColor = "black";
+      }
+      function validate() {
+        const nickname = document.getElementById("name");
+        const pass = document.getElementById("pass");
+        const repass = document.getElementById("pass2");
+        const err = document.getElementById("err");
+
+        resetRedBorders(nickname, pass, repass);
+        if (!/^\w+$/.test(nickname.value)) {
+          err.innerHTML =
+            "Nickname may only contain underscore, letters and numbers.";
+          nickname.style.borderColor = "red";
+
+          return false;
+        }
+        if (pass.value.length < 6) {
+          pass.style.borderColor = "red";
+          err.innerHTML = "Password should be greater than 6 characters.";
+          return false;
+        }
+        if (pass.value.length > 18) {
+          pass.style.borderColor = "red";
+          err.innerHTML = "Password should be smaller than 18 characters.";
+          return false;
+        }
+        if (pass.value !== repass.value) {
+          repass.style.borderColor = "red";
+          err.innerHTML = "Password didn't match!";
+          return false;
+        }
+
+        err.innerHTML = "";
+      }
+    </script>
   </head>
   <body>
-    <nav>
+  <nav>
       <div class="ctr">
-        <a href="index.html" id="n1">HOME</a>
-        <a href="basics.html" id="n2">BASICS</a>
-        <a href="about.html" id="n3">ABOUT</a>
-        <a href="feedback.html" id="n4">FEEDBACK</a>
-        <a href="login.html" id="n5">LOGIN</a>
-        <a href="app.html" id="n6" target="_blank">APP</a>
+        <a href="index.php" id="n1">HOME</a>
+        <a href="basics.php" id="n2">BASICS</a>
+        <a href="about.php" id="n3">ABOUT</a>
+        <a href="feedback.php" id="n4">FEEDBACK</a>
+        <?php if(isset($_COOKIE['user'])) echo '<a href="logout.php" id="n5">LOGOUT</a>'; else echo '<a href="login.php" id="n5">LOGIN</a>'?>
+        <!-- <a href="login.html" id="n5">LOGIN</a> -->
+        <a href="app.php" id="n6" target="_blank">APP</a>
       </div>
     </nav>
-    <div class="container col-flex" id="container">
+    <form
+      action="signup.php"
+      method="post"
+      class="container col-flex"
+      id="container"
+      onsubmit="return validate()"
+    >
       <label
         style="
           padding: 12px 0;
@@ -84,12 +135,13 @@
         "
         >SIGNUP</label
       >
-      <label>New Nickname:</label>
+      <label>New Username:</label>
       <input
         type="text"
-        placeholder="Nickname"
+        placeholder="Username"
         id="name"
-        onmouseout="check1()"
+        onmouseout="//validate()"
+        name="nick"
       />
       <label style="margin-top: 20px">Create Password:</label>
       <input
@@ -97,8 +149,8 @@
         type="password"
         placeholder="Password"
         id="pass"
-        onmouseout="check2()"
-        ;
+        onmouseout="//validate()"
+        name="pass"
       />
       <label style="margin-top: 0">Re-Enter Password:</label>
       <input
@@ -106,17 +158,47 @@
         type="password"
         placeholder="Re-Enter Password"
         id="pass2"
-        onmouseout="check3()"
-        ;
+        onmouseout="//validate()"
       />
+      <label id="err" style="color: red">
+<?php
+  require 'config.php';
 
+  if(!empty($_POST)) {
+    $nick = $_REQUEST['nick'];
+    $pass = $_REQUEST['pass'];
+    $pass = hash('sha256', $pass);
+    $conn = new mysqli($host,$username,$password,$db);
+
+    if($conn->connect_error) die("Connection failed".$connect_error."<br>");
+
+    $sql = "insert into user(nick,pass) values('$nick','$pass');";
+    
+    if($conn->query($sql) === TRUE){
+      setcookie('user', $nick, time() + (86400 * 30), "/");  
+      echo "Success!";
+      
+    }else
+      echo "Username already exist!";
+
+    $conn->close();
+  }
+
+?>
+  </label>
+<script>
+  err = document.getElementById("err");
+  if(err.innerHTML.trim() === "Success!") {
+    window.location.href = "app.php";
+  }
+</script>
       <label>Already registered? <a id="l" href="login.html">Login!</a></label>
-      <button>SIGNUP</button>
-    </div>
+      <input class="button" type="submit" value="SIGNUP" />
+    </form>
 
-    <div style="float: right">
+    <!-- <div style="float: right">
       <textarea name="text" id="message" cols="30" rows="10"></textarea>
-    </div>
+    </div> -->
   </body>
   <style>
     * {
@@ -159,7 +241,7 @@
     body .container input:focus {
       border-color: #516beb;
     }
-    body .container button {
+    body .container .button {
       margin-top: 20px;
       padding: 8px 0;
       outline: none;
@@ -170,8 +252,11 @@
       font-size: 18px;
       transition-duration: 0.4s;
     }
-    body .container button:hover {
+    body .container .button:hover {
       background-color: green;
+    }
+    body .container .button:disabled {
+      background-color: grey;
     }
     body .container a {
       text-decoration: none;

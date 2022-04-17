@@ -495,6 +495,10 @@ function startLevel() {
           stopQuestionTimer();
           showHint();
           hintsUsed++;
+          pointsHistory.push(
+            `LEVEL ${currentLevel} | 40 points deducted for using hint.`
+          );
+          score -= 40;
         });
       }
       //document.getElementById('p1').classList.remove('active');

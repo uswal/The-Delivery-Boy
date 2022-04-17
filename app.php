@@ -12,21 +12,7 @@
     /> -->
   </head>
   <body id="frame">
-    <div class="container">
-      <div class="level">
-        <div class="center">
-          <label
-            >CONGRATULATIONS!<br />
-            YOU HAVE FINISHED THE GAME WITH A TOTAL OF <br /><b>5000 POINTS!</b>
-            <br
-          /></label>
-          <div>
-            <button id="new-game">NEW GAME</button
-            ><button id="main-menu">MAIN MENU</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </body>
   <script src="js/menu.js" type="module"></script>
   <!-- <script src="js/menu.js"></script> -->

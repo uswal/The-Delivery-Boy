@@ -1,14 +1,19 @@
 import beginPlay from "./play.js";
+import { getCookie } from "./_functions.js";
 
 console.log("JS LOADED?");
 var menuState = "LEADERBOARD"; // MENU  TUTORIAL LEADERBOARD PLAY
 //var playState = "SHEET"; // ARE_YOU_READY SHEET LEVEL HINTS RESULT
 const frame = document.getElementById("frame");
+const user =
+  getCookie("user") === undefined ? "GuestPlayer" : getCookie("user");
+console.log(user);
 
 function changeToDefaultMenu() {
   menuState = "MENU";
   frame.innerHTML = `
             <div class="container col-flex menu">
+            <label class="header">Welcome, ${user} </label>
             <label class="header" id="hdr">MENU</label>
             <label class="big-option" id="play">PLAY</label>
             <label class="big-option">TUTORIAL</label>

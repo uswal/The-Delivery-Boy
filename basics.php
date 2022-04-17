@@ -13,12 +13,13 @@
 
     <nav>
       <div class="ctr">
-        <a href="index.html" id="n1">HOME</a>
-        <a href="basics.html" id="n2">BASICS</a>
-        <a href="about.html" id="n3">ABOUT</a>
-        <a href="feedback.html" id="n4">FEEDBACK</a>
-        <a href="login.html" id="n5">LOGIN</a>
-        <a href="app.html" id="n6" target="_blank">APP</a>
+        <a href="index.php" id="n1">HOME</a>
+        <a href="basics.php" id="n2">BASICS</a>
+        <a href="about.php" id="n3">ABOUT</a>
+        <a href="feedback.php" id="n4">FEEDBACK</a>
+        <?php if(isset($_COOKIE['user'])) echo '<a href="logout.php" id="n5">LOGOUT</a>'; else echo '<a href="login.php" id="n5">LOGIN</a>'?>
+        <!-- <a href="login.html" id="n5">LOGIN</a> -->
+        <a href="app.php" id="n6" target="_blank">APP</a>
       </div>
     </nav>
 
