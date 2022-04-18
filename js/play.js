@@ -1,9 +1,16 @@
-import { shuffle, randomNumber, getRadioValue } from "./_functions.js";
+import {
+  shuffle,
+  randomNumber,
+  getRadioValue,
+  getCookie,
+} from "./_functions.js";
 import { allAddress, allPackages } from "./_data.js";
 import { changeToDefaultMenu } from "./menu.js";
 
+const user =
+  getCookie("user") === undefined ? "GuestPlayer" : getCookie("user");
 var currentLevel;
-const maxLevel = 5;
+const maxLevel = 2;
 var playState = "ASK_READY"; // SHEET RESULT GAME
 var pairs = {};
 var score = 0;
@@ -176,16 +183,16 @@ function startLevel() {
     frame.innerHTML = `
     <div class="container">
     <div class="level">
-      <div class="center">
+      <form action="app.php" method="post" class="center col-flex">
         <label
           >CONGRATULATIONS!<br />
           YOU HAVE FINISHED THE GAME WITH A TOTAL OF <br /><b>${score} POINTS!</b> <br
         /></label>
-        <div>
-          <button id="new-game">NEW GAME</button
-          ><button id="main-menu">MAIN MENU</button>
-        </div>
-      </div>
+        <input type="text" name="nick" value='${user}' style="visibility:hidden" />
+        <input type="text" name="score" value='${score}' style="visibility:hidden" />
+        <input id="main-menu" type="submit" value="BACK TO MAIN MENU" />
+      
+      </form>
     </div>
   </div>
     `;

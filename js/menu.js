@@ -11,12 +11,16 @@ console.log(user);
 
 function changeToDefaultMenu() {
   menuState = "MENU";
+  const st =
+    user === "GuestPlayer" ? `<a href="login.php" id="logi">LOGIN</a>` : "";
   frame.innerHTML = `
-            <div class="container col-flex menu">
+          ${st}
+          <div class="container col-flex menu">
+            
             <label class="header">Welcome, ${user} </label>
             <label class="header" id="hdr">MENU</label>
             <label class="big-option" id="play">PLAY</label>
-            <label class="big-option">TUTORIAL</label>
+            <label class="big-option" id="tutorial">TUTORIAL</label>
             <label class="big-option" id="leaderboard">LEADERBOARD</label>
           </div>
             `;
@@ -24,12 +28,16 @@ function changeToDefaultMenu() {
     .getElementById("leaderboard")
     .addEventListener("click", () => changeToLeaderboard());
   document.getElementById("play").addEventListener("click", () => beginPlay());
-  console.log("Change To Default");
+  document.getElementById("tutorial").addEventListener("click", tut);
+  function tut() {
+    window.location.href = "basics.php#game-mode";
+  }
 }
 
 function changeToLeaderboard() {
   menuState = "LEADERBOARD";
-  frame.innerHTML = `
+  window.location.href = "leaderboard.php";
+  /*frame.innerHTML = `
     <div class="container col-flex leaderboard">
       <label class="header">LEADERBOARD</label>
       <table>
@@ -65,7 +73,7 @@ function changeToLeaderboard() {
     `;
   document
     .getElementById("main-menu")
-    .addEventListener("click", () => changeToDefaultMenu());
+    .addEventListener("click", () => changeToDefaultMenu());*/
 }
 changeToDefaultMenu();
 

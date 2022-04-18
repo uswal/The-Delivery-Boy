@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,8 +100,7 @@
         <a href="basics.php" id="n2">BASICS</a>
         <a href="about.php" id="n3">ABOUT</a>
         <a href="feedback.php" id="n4">FEEDBACK</a>
-        <?php if(isset($_COOKIE['user'])) echo '<a href="logout.php" id="n5">LOGOUT</a>'; else echo '<a href="login.php" id="n5">LOGIN</a>'?>
-        <!-- <a href="login.html" id="n5">LOGIN</a> -->
+        <a href="login.html" id="n5">LOGIN</a>
         <a href="app.php" id="n6" target="_blank">APP</a>
       </div>
     </nav>
@@ -163,33 +160,28 @@
       <label id="err" style="color: red">
 <?php
   require 'config.php';
-
   if(!empty($_POST)) {
     $nick = $_REQUEST['nick'];
     $pass = $_REQUEST['pass'];
     $pass = hash('sha256', $pass);
     $conn = new mysqli($host,$username,$password,$db);
-
     if($conn->connect_error) die("Connection failed".$connect_error."<br>");
-
     $sql = "insert into user(nick,pass) values('$nick','$pass');";
-    
     if($conn->query($sql) === TRUE){
-      setcookie('user', $nick, time() + (86400 * 30), "/");  
-      echo "Success!";
-      
+      //setcookie('user', $nick, time() + (86400 * 30), "/");
+      //error_reporting(0);
+      echo "Success!";                
     }else
       echo "Username already exist!";
 
     $conn->close();
   }
-
 ?>
   </label>
 <script>
   err = document.getElementById("err");
   if(err.innerHTML.trim() === "Success!") {
-    window.location.href = "app.php";
+    window.location.href = "login.php";
   }
 </script>
       <label>Already registered? <a id="l" href="login.html">Login!</a></label>

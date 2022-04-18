@@ -33,7 +33,7 @@
     else
         echo "Error creating user table"."<br>";
 
-    $sql = "create table leaderboard(s_id varchar(100) primary key, nick varchar(100), score int(10),time timestamp, foreign key(nick) references user(nick))";
+    $sql = "create table leaderboard(time timestamp primary key, nick varchar(100), score int(10), foreign key(nick) references user(nick))";
 
     if($conn->query($sql) === TRUE)
         echo "Leaderboard table creation success"."<br>";

@@ -94,11 +94,33 @@ body .container button {
   background: none;
   border: none;
 }
+
+body .leaderboard a {
+  text-decoration: none;
+  font-size: 22px;
+  padding: 8px 14px;
+  border: 1px solid green;
+  margin: 16px 10px;
+  color: black;
+  transition-duration: 0.4s;
+  width: 40%;
+  float: left;
+}
+
+body .leaderboard a:hover {
+  background-color: green;
+  color: white;
+}
 body .leaderboard button {
   font-size: 22px;
   padding: 8px 14px;
   border: 1px solid green;
   margin: 16px 10px;
+  transition-duration: 0.4s;
+}
+body .leaderboard button:hover {
+  background-color: green;
+  color: white;
 }
 
 body .sheet th {
@@ -296,7 +318,8 @@ body .sheet {
   line-height: 2em;
 }
 
-.level .center button {
+.level .center button,
+input[type="submit"] {
   font-size: 20px;
   margin-top: 100px;
   padding: 10px 40px;
@@ -304,9 +327,11 @@ body .sheet {
   background-color: #516beb;
   color: white;
   margin-left: 10px;
+  border: none;
 }
 
-.level .center button:hover {
+.level .center button:hover,
+input[type="submit"]:hover {
   background-color: green;
 }
 
@@ -335,4 +360,25 @@ body .sheet {
 #i-m-ready:hover {
   background-color: #516beb;
   color: White;
+}
+/* 
+ */
+
+#logi {
+  position: absolute;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 16px 30px;
+  background-color: white;
+  border-radius: 2px;
+  top: 10px;
+  left: 10px;
+  color: #516beb;
+  transition-duration: 0.4s;
+}
+
+#logi:hover {
+  background-color: #516beb;
+  color: white;
 }
