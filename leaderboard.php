@@ -32,16 +32,16 @@
             $previous = $pPg >= 1 ? "<a id='l-l' href='leaderboard.php?page=$pPg'>PREVIOUS</a>" :  "<a style='visibility:hidden'></a>";
             $next = $result->num_rows > 10 ? "<a id='l-r' href='leaderboard.php?page=$nPg'>NEXT</a>" : "";
             if ($result->num_rows > 0) {
-                $c++;
+                
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    if($c==11) continue;
+                    if($c==10) continue;
                     $ll++; 
                         //echo "id: " . $row["book_id"]. " - Name: " . $row["title"]. " " . $row["author_name"]. "<br>";
                     $nick = $row["nick"];
                     $score = $row["score"];
                     $h .= "<tr><td>$ll</td><td>$nick</td><td>$score</td></tr>";   
-                                           
+                    $c++;                
                 }
                 $second = "</table>
                     <div class='row-flex'>

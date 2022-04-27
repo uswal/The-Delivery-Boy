@@ -152,12 +152,17 @@
     
     if ($result->num_rows > 0) {
       $row = $result->fetch_assoc();
+      
+      //echo $row['nick'];
+      if($row['pass'] == $pass) {
+      setcookie('user', $row['nick'], time() + (86400 * 30), "/");  
       echo "Success!";
-      //echo $row['nick'];  
-      setcookie('user', $row['nick'], time() + (86400 * 30), "/");   
+      } else {
+        echo "Incorrect password!";
+      }
       
     } else {
-      echo "Username and Password didn't match!";
+      echo "Username not found! Please signup!";
     }
 
     $conn->close();

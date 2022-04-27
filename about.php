@@ -36,7 +36,7 @@
           >
             About Us
           </h1> -->
-          <center><img src="assets/image(2).jpg" style="height:80vh" /></center>
+          <center><img src="assets/final.jpg" style="height:80vh" /></center>
           <!--<label class="col-flex">
             <label
               style="
@@ -110,7 +110,17 @@
         </p>-->
         <p style="margin-top: 30px">
           <!---<b class="make-me-blue"> THE GAME.</b><br />-->
-         The four of us are enthusiastic students who are driven by a mindset of wanting to learn and performing to the best of our capabilities. 
+         The four of us are enthusiastic students who are driven by a mindset of wanting to learn and performing to the best of our capabilities. <br> <div style="padding:10px 0">Our contributions are listed below, </div>
+        <p style = "margin-top : 30 px">
+        <b>Prateek</b> : <i>worked on  validation using javascript for feedback page and its working with database and login and signup page using database  <br><br></i>
+        </p>
+        <p style = "margin-top: 30 px;">
+         <b>Sharan</b> :  <i>Design of feedback page and signup page  , modified overall design to present the project in a better way.  <br><br> </i>
+        <p style = "margin-top: 30 px;">
+        <b>Aditya</b> : balsmiq wireframes,login page,sign-up page design,content searching  <br><br> 
+        
+        <div style="padding-top:40px" >
+        <b>Ujjawal Anand:</b> <p> </p> <i>Desgining & coding the frontend theme along with the transitions on elements. Created application page using javascript and php. Designing structure of our database and creatied leaderboard page using php.
           <!--<a href="#game-mode" class="link-hover">More Details</a>
         </p>-->
         <!---<p style="margin-top: 30px">
@@ -122,7 +132,9 @@
           <b class="make-me-blue">3: LEADERBOARD</b><br />
           This is the players where the players rankings will be showin in
           ascending order.-->
-        </p>
+</i>
+        </div>
+        
       </div>
     </div>
 

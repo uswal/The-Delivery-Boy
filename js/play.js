@@ -10,7 +10,7 @@ import { changeToDefaultMenu } from "./menu.js";
 const user =
   getCookie("user") === undefined ? "GuestPlayer" : getCookie("user");
 var currentLevel;
-const maxLevel = 2;
+const maxLevel = 5;
 var playState = "ASK_READY"; // SHEET RESULT GAME
 var pairs = {};
 var score = 0;

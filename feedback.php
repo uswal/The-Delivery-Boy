@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,38 +9,7 @@
     <link rel="stylesheet" href="css/index.css" />
 
     <script>
-      function resetBorder(name,number,email){
-        name.style.borderColor = "black";
-        number.style.borderColor = "black";
-        email.style.borderColor = "black";
-      }
-      function validate(){
-        const name = document.getElementById("name");
-        const number = document.getElementById("number");
-        const email = document.getElementById("email");
-        
-        name.style.borderColor = "grey";
-        number.style.borderColor = "grey";
-        email.style.borderColor = "grey";
-        
-        if(!/^([a-z]+) ([a-z]+?)$/i.test(name.value)){
-          name.style.borderColor = "red";
-          return false;
-        }
-
-        if(!/\S+@\S+\.\S+/.test(email.value)){
-          email.style.borderColor = "red";
-          return false;
-        }
-
-        if(!/^[6-9]\d{9}$/.test(number.value)){
-          number.style.borderColor = "red";
-          return false;
-        }
-        return true;
-      }
-
-      /*
+      
       function check1()
       {
         var a=document.getElementById("name").value;
@@ -53,6 +21,29 @@
         else
         {
           document.getElementById("name").style.background="red";
+          return false;
+        }
+        var a=document.getElementById("email").value;
+        var regx=/\S+@\S+\.\S+/
+        if(regx.test(a))
+        {
+            document.getElementById("email").style.background="green";
+        }
+        else
+        {
+          document.getElementById("email").style.background="red";
+          return false;
+        }
+        var a=document.getElementById("number").value;
+        var regx=/^[6-9]\d{9}$/;
+        if(regx.test(a))
+        {
+            document.getElementById("number").style.background="green";
+        }
+        else
+        {
+          document.getElementById("number").style.background="red";
+          return false;
         }
       }
 
@@ -68,6 +59,7 @@
         else
         {
           document.getElementById("number").style.background="red";
+          return false;
         }
       }
 
@@ -82,9 +74,10 @@
         else
         {
           document.getElementById("email").style.background="red";
+          return false;
         }
       }
-      */
+
       
 
     </script>
@@ -120,21 +113,21 @@
           </div>
           <div class="app-contact"> Write to us at webprojectdelivery@protonmail.com</div>
         </div>
-        <form action="feedback.php" method="post" onsubmit="return validate()">
+        <form action="feedback_php.php" onsubmit="return check1()" method="post">
         <div class="screen-body-item">
           <div class="app-form">
             <div class="app-form-group">
-              <input type="text"  placeholder="NAME" id="name" onmouseout="//check1()">
+              <input type="text"  placeholder="NAME" id="name" name="name">
             </div>
             <div class="app-form-group">
-              <input type="text" placeholder="EMAIL" id="email" onmouseout="//check3()">
+              <input type="text" placeholder="EMAIL" id="email" required name="email">
             </div>
             <div class="app-form-group">
-              <input type="text" placeholder="CONTACT NO" id="number" onmouseout="//check2()">
+              <input type="text" placeholder="CONTACT NO" id="number" name="number">
             </div>
             <label for="name" style="visibility: hidden;" id="lable">wrong input </label>
             <div class="app-form-group message">
-              <input type="text" placeholder="SUGGESTIONS" id="suggestion">
+             <textarea id="sug" cols="30" rows="10" placeholder="enter your suggestion" name="sug" required></textarea>
             </div>
             <div class="app-form-group buttons">
               <button class="app-form-button">CANCEL</button>
