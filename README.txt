@@ -21,9 +21,5 @@ Step 5 :- Import the sql file through http://localhost/phpmyadmin given in the p
 
 Step 6 :- Open the server's page in the browser(i.e localhost). Access and run the project files from there.
 
->> This project was done as a team with significant contributions from each member of the team. 
--Ujjawal Anand
--Aditya s
--Prateek
--Sharan B
+
  
